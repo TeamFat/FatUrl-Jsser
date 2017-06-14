@@ -1,10 +1,13 @@
 package routers
 
 import (
-	"github.com/TeamFat/FatUrl-Jsser/controllers"
+	"github.com/TeamFat/FatUrl-Jsser/controllers/frontend"
 	"github.com/astaxie/beego"
 )
 
 func init() {
-    beego.Router("/", &controllers.MainController{})
+	//frontend
+	beego.Router("/", &frontend.SiteController{})
+
+	//backend
 }
