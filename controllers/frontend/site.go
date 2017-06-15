@@ -1,15 +1,19 @@
 package frontend
 
-import "github.com/TeamFat/FatUrl-Jsser/controllers"
-
+/*
+ *首页统一配置
+ */
 type SiteController struct {
-	controllers.BaseController
+	BaseController
 }
 
-func (this *SiteController) Get() {
-
+func (this *SiteController) Prepare() {
 	this.Layout = "frontend/layout/layout.html"
-	this.TplName = "frontend/index.html"
+}
+
+func (this *SiteController) Index() {
+
+	this.TplName = "frontend/site/index.html"
 }
 
 //登陆
@@ -24,5 +28,5 @@ func (this *SiteController) Register() {
 
 //关于我们
 func (this *SiteController) About() {
-
+	this.TplName = "frontend/site/about.html"
 }

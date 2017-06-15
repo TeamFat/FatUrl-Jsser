@@ -6,8 +6,10 @@ import (
 )
 
 func init() {
-	//frontend
-	beego.Router("/", &frontend.SiteController{})
-
-	//backend
+	/* Frontend */
+	//首页
+	beego.Router("/", &frontend.SiteController{}, "*:Index")
+	//关于我们
+	beego.Router("/about", &frontend.SiteController{}, "*:About")
+	/* Backend */
 }

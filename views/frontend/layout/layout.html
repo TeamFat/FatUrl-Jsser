@@ -13,8 +13,8 @@
     {{.Head}}
 </head>
 
-<body class="am-topbar-fixed-top">
-<header class="am-topbar am-topbar-fixed-top">
+<body>
+<header class="am-topbar">
     <div class="am-container">
         <h1 class="am-topbar-brand"><a href="#">FatUrl</a></h1>
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
@@ -43,9 +43,11 @@
     </div>
 </header>
 
+<div class="content">
+    
+            {{.LayoutContent}}
 
-{{.LayoutContent}}
-
+</div>
 
 <div class="footer">
     <div class="copy-right">© 2017 <a href="http://teamfat.org" target="_blank">TeamFat, Inc.</a> Licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. by the TeamFat Jsser.</div>
