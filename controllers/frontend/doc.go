@@ -7,3 +7,7 @@ import (
 type DocController struct {
 	beego.Controller
 }
+
+func (this *DocController) Index() {
+
+}

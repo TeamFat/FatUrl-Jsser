@@ -8,6 +8,8 @@ type SiteController struct {
 }
 
 func (this *SiteController) Prepare() {
+	//重载父类方法
+	this.BaseController.Prepare()
 	this.Layout = "frontend/layout/layout.html"
 }
 
