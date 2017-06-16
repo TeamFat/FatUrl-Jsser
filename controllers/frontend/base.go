@@ -23,7 +23,7 @@ func (this *BaseController) Prepare() {
 	//登陆验证
 	this.auth()
 
-	this.Data["appName"] = beego.AppConfig.String("appname")
+	this.Data["appName"] = beego.AppConfig.String("AppName")
 	this.Data["curRoute"] = this.controllerName + "." + this.actionName
 	this.Data["curController"] = this.controllerName
 	this.Data["curAction"] = this.actionName
