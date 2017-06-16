@@ -14,21 +14,24 @@ func (this *SiteController) Prepare() {
 }
 
 func (this *SiteController) Index() {
-
+	this.Data["IsHome"] = true
 	this.TplName = "frontend/site/index.html"
 }
 
 //登陆
 func (this *SiteController) Login() {
+	this.Data["IsLogin"] = true
 
 }
 
 //注册
 func (this *SiteController) Register() {
+	this.Data["IsRegister"] = true
 
 }
 
 //关于我们
 func (this *SiteController) About() {
+	this.Data["IsAbout"] = true
 	this.TplName = "frontend/site/about.html"
 }
