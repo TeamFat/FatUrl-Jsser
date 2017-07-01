@@ -13,6 +13,7 @@ func (this *SiteController) Prepare() {
 	this.Layout = "frontend/layout/layout.html"
 }
 
+//首页
 func (this *SiteController) Index() {
 	this.Data["IsHome"] = true
 	this.TplName = "frontend/site/index.html"
