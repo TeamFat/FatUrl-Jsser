@@ -10,8 +10,8 @@ func init() {
 
 	/* Api */
 
-	beego.Router("/api/v1/url/encode", &v1.UrlController{}, "*:Encode")
-	beego.Router("/api/v1/url/decode", &v1.UrlController{}, "*:Decode")
+	beego.Router("/api/v1/url/encode/:id([0-9]+)", &v1.UrlController{}, "*:Encode")
+	beego.Router("/api/v1/url/decode/:hash([a-zA-z0-9]+)", &v1.UrlController{}, "*:Decode")
 
 	/* Frontend */
 	//首页
